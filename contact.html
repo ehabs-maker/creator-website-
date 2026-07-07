@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — CREATOR</title>
+<meta name="description" content="Contactez CREATOR. Email : msvetopartner@gmail.com — Tél : +221 77 637 98 59 — Guédiawaye, Sénégal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.jpeg" alt="Logo CREATOR">
+      <span class="brand-name">CREATOR</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="expertises.html">Expertises</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="apropos.html">À propos</a>
+    <a href="expertises.html">Expertises</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h1>Parlons de votre projet réglementaire.</h1>
+    <p>Décrivez-nous votre produit, votre marché cible ou votre échéance : nous revenons vers vous avec une première lecture sous 48h.</p>
+  </div>
+</section>
+
+<section class="section contact" style="background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);">
+  <div class="wrap contact-grid">
+
+    <div>
+      <div class="kicker" style="color:var(--gold-light)">Nos coordonnées</div>
+      <h2 style="color:var(--paper); margin-bottom:12px">Nous sommes à votre écoute.</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.72); margin-bottom:40px">Que vous soyez laboratoire international, PME locale ou porteur de projet, CREATOR vous répond avec réactivité et professionnalisme.</p>
+
+      <div class="contact-info">
+        <div>
+          <span>E-mail</span>
+          <a href="mailto:msvetopartner@gmail.com">msvetopartner@gmail.com</a>
+        </div>
+        <div>
+          <span>Téléphone</span>
+          <a href="tel:+221776379859">+221 77 637 98 59</a>
+        </div>
+        <div>
+          <span>Basé à</span>
+          <p>Guédiawaye, Sénégal</p>
+        </div>
+        <div>
+          <span>Fondateur & Directeur</span>
+          <p>Dr Malick SENE</p>
+        </div>
+        <div>
+          <span>Zone d'intervention principale</span>
+          <p>UEMOA — Afrique de l'Ouest & International</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="formSuccess" class="form-success">
+        ✓ Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.
+      </div>
+
+      <!-- FORMSPREE : remplacer YOUR_FORM_ID par votre identifiant Formspree -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+        <input type="hidden" name="_subject" value="Nouvelle demande via le site CREATOR">
+        <input type="hidden" name="_language" value="fr">
+
+        <div class="field">
+          <label for="name">Nom complet *</label>
+          <input id="name" name="name" type="text" placeholder="Votre nom" required>
+        </div>
+        <div class="field">
+          <label for="org">Structure / Organisation</label>
+          <input id="org" name="organisation" type="text" placeholder="Nom de votre entreprise / laboratoire">
+        </div>
+        <div class="field">
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="telephone" type="tel" placeholder="+221 XX XXX XX XX">
+        </div>
+        <div class="field">
+          <label for="topic">Type de besoin *</label>
+          <select id="topic" name="type_de_besoin" required>
+            <option value="">-- Sélectionnez un type de besoin --</option>
+            <option>Stratégie & accompagnement de projets</option>
+            <option>Audit & conformité réglementaire</option>
+            <option>Enregistrement de produits vétérinaires (AMM)</option>
+            <option>Élaboration de dossier de projet industriel</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Votre message *</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet en quelques lignes : produit, marché cible, échéance..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer la demande →</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
+    <p>© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const action = form.getAttribute('action');
+      if (action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        alert('Le formulaire n\'est pas encore configuré. Veuillez envoyer votre demande directement à : msvetopartner@gmail.com');
+        return;
+      }
+    });
+    // Afficher le message de succès si Formspree redirige avec ?success
+    if (window.location.search.includes('success')) {
+      document.getElementById('formSuccess').classList.add('show');
+      form.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

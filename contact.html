@@ -8,127 +8,85 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.jpeg" alt="Logo CREATOR">
-      <span class="brand-name">CREATOR</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="expertises.html">Expertises</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <a href="index.html" class="brand"><img src="logo.jpeg" alt="Logo CREATOR"><span class="brand-name">CREATOR</span></a>
+    <nav><ul>
+      <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="expertises.html" data-i18n="nav.expertises">Expertises</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="lang-btn" onclick="i18n.toggle()">EN</button>
+      <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Nous contacter</a>
+    </div>
     <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="apropos.html">À propos</a>
-    <a href="expertises.html">Expertises</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="contact.html">Contact</a>
+    <a href="apropos.html" data-i18n="nav.about">À propos</a>
+    <a href="expertises.html" data-i18n="nav.expertises">Expertises</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <button class="lang-btn" onclick="i18n.toggle()" style="margin-top:12px;align-self:flex-start">EN</button>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="kicker">Contact</div>
-    <h1>Parlons de votre projet réglementaire.</h1>
-    <p>Décrivez-nous votre produit, votre marché cible ou votre échéance : nous revenons vers vous avec une première lecture sous 48h.</p>
+    <div class="kicker" data-i18n="co.kicker.hero">Contact</div>
+    <h1 data-i18n="co.h1">Parlons de votre projet réglementaire.</h1>
+    <p data-i18n="co.hero.p">Décrivez-nous votre produit, votre marché cible ou votre échéance : nous revenons vers vous avec une première lecture sous 48h.</p>
   </div>
 </section>
 
 <section class="section contact" style="background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);">
   <div class="wrap contact-grid">
-
     <div>
-      <div class="kicker" style="color:var(--gold-light)">Nos coordonnées</div>
-      <h2 style="color:var(--paper); margin-bottom:12px">Nous sommes à votre écoute.</h2>
-      <p class="lead" style="color:rgba(255,255,255,0.72); margin-bottom:40px">Que vous soyez laboratoire international, PME locale ou porteur de projet, CREATOR vous répond avec réactivité et professionnalisme.</p>
-
+      <div class="kicker" style="color:var(--gold-light)" data-i18n="co.kicker1">Nos coordonnées</div>
+      <h2 style="color:var(--paper); margin-bottom:12px" data-i18n="co.h2">Nous sommes à votre écoute.</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.72); margin-bottom:40px" data-i18n="co.lead">Que vous soyez laboratoire international, PME locale ou porteur de projet, CREATOR vous répond avec réactivité et professionnalisme.</p>
       <div class="contact-info">
-        <div>
-          <span>E-mail</span>
-          <a href="mailto:msvetopartner@gmail.com">msvetopartner@gmail.com</a>
-        </div>
-        <div>
-          <span>Téléphone</span>
-          <a href="tel:+221776379859">+221 77 637 98 59</a>
-        </div>
-        <div>
-          <span>Basé à</span>
-          <p>Guédiawaye, Sénégal</p>
-        </div>
-        <div>
-          <span>Fondateur & Directeur</span>
-          <p>Dr Malick SENE</p>
-        </div>
-        <div>
-          <span>Zone d'intervention principale</span>
-          <p>UEMOA — Afrique de l'Ouest & International</p>
-        </div>
+        <div><span data-i18n="co.lbl.email">E-mail</span><a href="mailto:msvetopartner@gmail.com">msvetopartner@gmail.com</a></div>
+        <div><span data-i18n="co.lbl.phone">Téléphone</span><a href="tel:+221776379859">+221 77 637 98 59</a></div>
+        <div><span data-i18n="co.lbl.based">Basé à</span><p>Guédiawaye, Sénégal</p></div>
+        <div><span data-i18n="co.lbl.founder">Fondateur & Directeur</span><p>Dr Malick SENE</p></div>
+        <div><span data-i18n="co.lbl.zone">Zone d'intervention principale</span><p data-i18n="co.zone.val">UEMOA — Afrique de l'Ouest & International</p></div>
       </div>
     </div>
-
     <div>
-      <div id="formSuccess" class="form-success">
-        ✓ Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.
-      </div>
-
-      <!-- FORMSPREE : remplacer YOUR_FORM_ID par votre identifiant Formspree -->
+      <div id="formSuccess" class="form-success" data-i18n="co.success">✓ Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.</div>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
         <input type="hidden" name="_subject" value="Nouvelle demande via le site CREATOR">
         <input type="hidden" name="_language" value="fr">
-
+        <div class="field"><label data-i18n="co.form.name.lbl">Nom complet *</label><input id="name" name="name" type="text" data-i18n="co.form.name.ph" placeholder="Votre nom" required></div>
+        <div class="field"><label data-i18n="co.form.org.lbl">Structure / Organisation</label><input id="org" name="organisation" type="text" data-i18n="co.form.org.ph" placeholder="Nom de votre entreprise / laboratoire"></div>
+        <div class="field"><label data-i18n="co.form.email.lbl">E-mail *</label><input id="email" name="email" type="email" placeholder="vous@exemple.com" required></div>
+        <div class="field"><label data-i18n="co.form.phone.lbl">Téléphone</label><input id="phone" name="telephone" type="tel" placeholder="+221 XX XXX XX XX"></div>
         <div class="field">
-          <label for="name">Nom complet *</label>
-          <input id="name" name="name" type="text" placeholder="Votre nom" required>
-        </div>
-        <div class="field">
-          <label for="org">Structure / Organisation</label>
-          <input id="org" name="organisation" type="text" placeholder="Nom de votre entreprise / laboratoire">
-        </div>
-        <div class="field">
-          <label for="email">E-mail *</label>
-          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
-        </div>
-        <div class="field">
-          <label for="phone">Téléphone</label>
-          <input id="phone" name="telephone" type="tel" placeholder="+221 XX XXX XX XX">
-        </div>
-        <div class="field">
-          <label for="topic">Type de besoin *</label>
+          <label data-i18n="co.form.topic.lbl">Type de besoin *</label>
           <select id="topic" name="type_de_besoin" required>
-            <option value="">-- Sélectionnez un type de besoin --</option>
-            <option>Stratégie & accompagnement de projets</option>
-            <option>Audit & conformité réglementaire</option>
-            <option>Enregistrement de produits vétérinaires (AMM)</option>
-            <option>Élaboration de dossier de projet industriel</option>
-            <option>Autre demande</option>
+            <option value="" data-i18n="co.form.topic.ph">-- Sélectionnez un type de besoin --</option>
+            <option data-i18n="co.form.opt1">Stratégie & accompagnement de projets</option>
+            <option data-i18n="co.form.opt2">Audit & conformité réglementaire</option>
+            <option data-i18n="co.form.opt3">Enregistrement de produits vétérinaires (AMM)</option>
+            <option data-i18n="co.form.opt4">Élaboration de dossier de projet industriel</option>
+            <option data-i18n="co.form.opt5">Autre demande</option>
           </select>
         </div>
-        <div class="field">
-          <label for="message">Votre message *</label>
-          <textarea id="message" name="message" placeholder="Décrivez votre projet en quelques lignes : produit, marché cible, échéance..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Envoyer la demande →</button>
+        <div class="field"><label data-i18n="co.form.msg.lbl">Votre message *</label><textarea id="message" name="message" data-i18n="co.form.msg.ph" placeholder="Décrivez votre projet en quelques lignes : produit, marché cible, échéance..." required></textarea></div>
+        <button type="submit" class="submit-btn" data-i18n="co.form.submit">Envoyer la demande →</button>
       </form>
     </div>
-
   </div>
 </section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
-    <p>© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
-  </div>
-</footer>
+<footer><div class="wrap footer-inner">
+  <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
+  <p data-i18n="footer.copy">© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
+</div></footer>
 
+<script src="i18n.js"></script>
 <script>
   const form = document.getElementById('contactForm');
   if (form) {
@@ -140,13 +98,11 @@
         return;
       }
     });
-    // Afficher le message de succès si Formspree redirige avec ?success
     if (window.location.search.includes('success')) {
       document.getElementById('formSuccess').classList.add('show');
       form.style.display = 'none';
     }
   }
 </script>
-
 </body>
 </html>

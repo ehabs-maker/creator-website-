@@ -8,143 +8,114 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.jpeg" alt="Logo CREATOR">
-      <span class="brand-name">CREATOR</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="expertises.html">Expertises</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <a href="index.html" class="brand"><img src="logo.jpeg" alt="Logo CREATOR"><span class="brand-name">CREATOR</span></a>
+    <nav><ul>
+      <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="expertises.html" data-i18n="nav.expertises">Expertises</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="lang-btn" onclick="i18n.toggle()">EN</button>
+      <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Nous contacter</a>
+    </div>
     <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="apropos.html">À propos</a>
-    <a href="expertises.html">Expertises</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="contact.html">Contact</a>
+    <a href="apropos.html" data-i18n="nav.about">À propos</a>
+    <a href="expertises.html" data-i18n="nav.expertises">Expertises</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <button class="lang-btn" onclick="i18n.toggle()" style="margin-top:12px;align-self:flex-start">EN</button>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero-inner">
-    <div class="eyebrow">Cabinet de conseil en affaires réglementaires vétérinaires</div>
-    <h1>La conformité réglementaire, <em>moteur</em> de votre accès au marché mondial.</h1>
-    <p>CREATOR accompagne les entreprises de la santé animale — laboratoires, fabricants et porteurs de projets — dans la stratégie, l'audit et l'enregistrement de leurs produits vétérinaires, du dossier initial jusqu'à l'autorisation de mise sur le marché.</p>
+    <div class="eyebrow" data-i18n="idx.eyebrow">Cabinet de conseil en affaires réglementaires vétérinaires</div>
+    <h1 data-i18n="idx.h1">La conformité réglementaire, <em>moteur</em> de votre accès au marché mondial.</h1>
+    <p data-i18n="idx.p">CREATOR accompagne les entreprises de la santé animale — laboratoires, fabricants et porteurs de projets — dans la stratégie, l'audit et l'enregistrement de leurs produits vétérinaires, du dossier initial jusqu'à l'autorisation de mise sur le marché.</p>
     <div class="btn-row">
-      <a href="contact.html" class="btn btn-primary">Planifier un échange</a>
-      <a href="expertises.html" class="btn btn-ghost">Découvrir nos expertises</a>
+      <a href="contact.html" class="btn btn-primary" data-i18n="idx.btn1">Planifier un échange</a>
+      <a href="expertises.html" class="btn btn-ghost" data-i18n="idx.btn2">Découvrir nos expertises</a>
     </div>
   </div>
   <div class="wrap hero-path">
-    <div class="step"><span class="dot"></span><span>Stratégie & cadrage du projet</span></div>
-    <div class="step"><span class="dot"></span><span>Audit & conformité réglementaire</span></div>
-    <div class="step"><span class="dot"></span><span>Enregistrement du produit</span></div>
-    <div class="step"><span class="dot"></span><span>Accès au marché mondial</span></div>
+    <div class="step"><span class="dot"></span><span data-i18n="idx.step1">Stratégie & cadrage du projet</span></div>
+    <div class="step"><span class="dot"></span><span data-i18n="idx.step2">Audit & conformité réglementaire</span></div>
+    <div class="step"><span class="dot"></span><span data-i18n="idx.step3">Enregistrement du produit</span></div>
+    <div class="step"><span class="dot"></span><span data-i18n="idx.step4">Accès au marché mondial</span></div>
   </div>
 </section>
 
 <section class="species-strip">
   <div class="wrap">
-    <p>Une expertise couvrant l'ensemble des filières animales</p>
+    <p data-i18n="idx.strip.p">Une expertise couvrant l'ensemble des filières animales</p>
     <div class="species-tags">
-      <span>Équine</span>
-      <span>Bovine</span>
-      <span>Canine & féline</span>
-      <span>Avicole</span>
+      <span data-i18n="idx.sp1">Équine</span><span data-i18n="idx.sp2">Bovine</span>
+      <span data-i18n="idx.sp3">Canine & féline</span><span data-i18n="idx.sp4">Avicole</span>
     </div>
   </div>
 </section>
 
-<!-- Résumé À propos -->
 <section class="section about">
   <div class="wrap about-grid">
     <div>
-      <div class="kicker">À propos de CREATOR</div>
-      <h2>Une excellence réglementaire au service d'un impact global.</h2>
-      <p class="lead">Nous sommes le partenaire réglementaire des acteurs de la santé animale qui veulent avancer vite, sans jamais transiger sur la rigueur. Notre rôle : traduire des exigences réglementaires complexes en une trajectoire claire, de la stratégie initiale jusqu'à l'enregistrement effectif du produit.</p>
+      <div class="kicker" data-i18n="idx.kicker1">À propos de CREATOR</div>
+      <h2 data-i18n="idx.h2.1">Une excellence réglementaire au service d'un impact global.</h2>
+      <p class="lead" data-i18n="idx.lead1">Nous sommes le partenaire réglementaire des acteurs de la santé animale qui veulent avancer vite, sans jamais transiger sur la rigueur. Notre rôle : traduire des exigences réglementaires complexes en une trajectoire claire, de la stratégie initiale jusqu'à l'enregistrement effectif du produit.</p>
       <div class="stat-row">
-        <div class="stat"><b>4</b><span>Piliers d'expertise</span></div>
-        <div class="stat"><b>5+</b><span>Dossiers AMM déposés</span></div>
-        <div class="stat"><b>UEMOA</b><span>Zone d'intervention</span></div>
+        <div class="stat"><b data-i18n="idx.stat1.b">4</b><span data-i18n="idx.stat1.s">Piliers d'expertise</span></div>
+        <div class="stat"><b data-i18n="idx.stat2.b">5+</b><span data-i18n="idx.stat2.s">Dossiers AMM déposés</span></div>
+        <div class="stat"><b data-i18n="idx.stat3.b">UEMOA</b><span data-i18n="idx.stat3.s">Zone d'intervention</span></div>
       </div>
-      <div style="margin-top:32px">
-        <a href="apropos.html" class="btn btn-primary" style="background:var(--navy); color:var(--paper);">En savoir plus</a>
-      </div>
+      <div style="margin-top:32px"><a href="apropos.html" class="btn btn-primary" style="background:var(--navy);color:var(--paper)" data-i18n="idx.btn3">En savoir plus</a></div>
     </div>
     <div>
-      <p class="lead">Chaque dossier réglementaire porte un enjeu de santé publique et un enjeu économique. CREATOR conçoit ses interventions comme un pont entre les deux : des méthodes rigoureuses, une lecture fine des cadres réglementaires locaux et internationaux, et un accompagnement de proximité pour chaque client.</p>
+      <p class="lead" data-i18n="idx.lead2">Chaque dossier réglementaire porte un enjeu de santé publique et un enjeu économique. CREATOR conçoit ses interventions comme un pont entre les deux : des méthodes rigoureuses, une lecture fine des cadres réglementaires locaux et internationaux, et un accompagnement de proximité pour chaque client.</p>
       <div class="founder-card" style="margin-top:36px">
         <div class="name">Dr Malick SENE</div>
-        <div class="title">Fondateur & Directeur de CREATOR</div>
-        <p>Vétérinaire spécialisé en affaires réglementaires, fort d'une expérience terrain en Afrique de l'Ouest et d'une maîtrise approfondie du cadre réglementaire UEMOA.</p>
+        <div class="title" data-i18n="idx.founder.title">Fondateur & Directeur de CREATOR</div>
+        <p data-i18n="idx.founder.p">Vétérinaire spécialisé en affaires réglementaires, fort d'une expérience terrain en Afrique de l'Ouest et d'une maîtrise approfondie du cadre réglementaire UEMOA.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Résumé Expertises -->
 <section class="section services" style="background:var(--cream)">
   <div class="wrap">
-    <div class="kicker">Nos expertises</div>
-    <h2>Quatre piliers, une seule ambition : sécuriser votre accès au marché.</h2>
+    <div class="kicker" data-i18n="idx.kicker2">Nos expertises</div>
+    <h2 data-i18n="idx.h2.2">Quatre piliers, une seule ambition : sécuriser votre accès au marché.</h2>
     <div class="service-list">
-      <div class="service-item">
-        <div class="service-mark">01</div>
-        <div><h3>Stratégie & accompagnement de projets</h3></div>
-        <p style="color:var(--ink-soft); font-size:15px; font-weight:300">Analyse de faisabilité, feuille de route réglementaire et pilotage jusqu'à la mise en œuvre.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-mark">02</div>
-        <div><h3>Audit & conformité réglementaire</h3></div>
-        <p style="color:var(--ink-soft); font-size:15px; font-weight:300">Évaluation de vos dossiers et systèmes qualité pour anticiper les non-conformités.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-mark">03</div>
-        <div><h3>Enregistrement des produits vétérinaires</h3></div>
-        <p style="color:var(--ink-soft); font-size:15px; font-weight:300">Constitution et dépôt de dossiers d'AMM avec suivi jusqu'à l'obtention de l'autorisation.</p>
-      </div>
-      <div class="service-item">
-        <div class="service-mark">04</div>
-        <div><h3>Élaboration de dossiers de projet industriels</h3></div>
-        <p style="color:var(--ink-soft); font-size:15px; font-weight:300">Montage de projets agroalimentaires et industriels pour PME et porteurs de projets.</p>
-      </div>
+      <div class="service-item"><div class="service-mark">01</div><div><h3 data-i18n="idx.s1.h3">Stratégie & accompagnement de projets</h3></div><p style="color:var(--ink-soft);font-size:15px;font-weight:300" data-i18n="idx.s1.p">Analyse de faisabilité, feuille de route réglementaire et pilotage jusqu'à la mise en œuvre.</p></div>
+      <div class="service-item"><div class="service-mark">02</div><div><h3 data-i18n="idx.s2.h3">Audit & conformité réglementaire</h3></div><p style="color:var(--ink-soft);font-size:15px;font-weight:300" data-i18n="idx.s2.p">Évaluation de vos dossiers et systèmes qualité pour anticiper les non-conformités.</p></div>
+      <div class="service-item"><div class="service-mark">03</div><div><h3 data-i18n="idx.s3.h3">Enregistrement des produits vétérinaires</h3></div><p style="color:var(--ink-soft);font-size:15px;font-weight:300" data-i18n="idx.s3.p">Constitution et dépôt de dossiers d'AMM avec suivi jusqu'à l'obtention de l'autorisation.</p></div>
+      <div class="service-item"><div class="service-mark">04</div><div><h3 data-i18n="idx.s4.h3">Élaboration de dossiers de projet industriels</h3></div><p style="color:var(--ink-soft);font-size:15px;font-weight:300" data-i18n="idx.s4.p">Montage de projets agroalimentaires et industriels pour PME et porteurs de projets.</p></div>
     </div>
-    <div style="margin-top:40px">
-      <a href="expertises.html" class="btn btn-primary">Voir toutes nos expertises</a>
-    </div>
+    <div style="margin-top:40px"><a href="expertises.html" class="btn btn-primary" data-i18n="idx.btn4">Voir toutes nos expertises</a></div>
   </div>
 </section>
 
-<!-- Approche / valeurs -->
 <section class="section approach">
   <div class="wrap">
-    <div class="kicker">Notre approche</div>
-    <h2>Une méthode exigeante, pensée pour la santé animale.</h2>
-    <p class="lead">Chaque mission s'appuie sur les mêmes fondamentaux, quel que soit le marché ou la filière concernée.</p>
+    <div class="kicker" data-i18n="idx.kicker3">Notre approche</div>
+    <h2 data-i18n="idx.h2.3">Une méthode exigeante, pensée pour la santé animale.</h2>
+    <p class="lead" data-i18n="idx.lead3">Chaque mission s'appuie sur les mêmes fondamentaux, quel que soit le marché ou la filière concernée.</p>
     <div class="value-grid">
-      <div class="value-cell"><b>Rigueur</b><p>Des dossiers construits pour résister à l'examen le plus strict des autorités.</p></div>
-      <div class="value-cell"><b>Clarté</b><p>Une feuille de route réglementaire lisible, sans jargon inutile.</p></div>
-      <div class="value-cell"><b>Proximité</b><p>Un interlocuteur unique, disponible à chaque étape du projet.</p></div>
-      <div class="value-cell"><b>Vision globale</b><p>Une lecture des marchés locaux et internationaux pour anticiper vos expansions.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v1.b">Rigueur</b><p data-i18n="idx.v1.p">Des dossiers construits pour résister à l'examen le plus strict des autorités.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v2.b">Clarté</b><p data-i18n="idx.v2.p">Une feuille de route réglementaire lisible, sans jargon inutile.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v3.b">Proximité</b><p data-i18n="idx.v3.p">Un interlocuteur unique, disponible à chaque étape du projet.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v4.b">Vision globale</b><p data-i18n="idx.v4.p">Une lecture des marchés locaux et internationaux pour anticiper vos expansions.</p></div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
-    <p>© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
-  </div>
-</footer>
-
+<footer><div class="wrap footer-inner">
+  <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
+  <p data-i18n="footer.copy">© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
+</div></footer>
+<script src="i18n.js"></script>
 </body>
 </html>

@@ -8,118 +8,108 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.jpeg" alt="Logo CREATOR">
-      <span class="brand-name">CREATOR</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="apropos.html" class="active">À propos</a></li>
-        <li><a href="expertises.html">Expertises</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <a href="index.html" class="brand"><img src="logo.jpeg" alt="Logo CREATOR"><span class="brand-name">CREATOR</span></a>
+    <nav><ul>
+      <li><a href="apropos.html" class="active" data-i18n="nav.about">À propos</a></li>
+      <li><a href="expertises.html" data-i18n="nav.expertises">Expertises</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="lang-btn" onclick="i18n.toggle()">EN</button>
+      <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Nous contacter</a>
+    </div>
     <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="apropos.html">À propos</a>
-    <a href="expertises.html">Expertises</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="contact.html">Contact</a>
+    <a href="apropos.html" data-i18n="nav.about">À propos</a>
+    <a href="expertises.html" data-i18n="nav.expertises">Expertises</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <button class="lang-btn" onclick="i18n.toggle()" style="margin-top:12px;align-self:flex-start">EN</button>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="kicker">À propos de CREATOR</div>
-    <h1>Une excellence réglementaire au service d'un impact global.</h1>
-    <p>Fondé en 2025 à Guédiawaye, Sénégal, CREATOR est le partenaire réglementaire des acteurs de la santé animale en Afrique de l'Ouest et au-delà.</p>
+    <div class="kicker" data-i18n="ap.kicker.hero">À propos de CREATOR</div>
+    <h1 data-i18n="ap.h1">Une excellence réglementaire au service d'un impact global.</h1>
+    <p data-i18n="ap.hero.p">Fondé en 2025 à Guédiawaye, Sénégal, CREATOR est le partenaire réglementaire des acteurs de la santé animale en Afrique de l'Ouest et au-delà.</p>
   </div>
 </section>
 
 <section class="section about">
   <div class="wrap about-grid">
     <div>
-      <div class="kicker">Notre mission</div>
-      <h2>La conformité réglementaire comme levier stratégique.</h2>
-      <p class="lead">CREATOR accompagne les laboratoires, fabricants et porteurs de projets de la santé animale dans la sécurisation de leur accès aux marchés — de la stratégie initiale jusqu'à l'obtention de l'Autorisation de Mise sur le Marché.</p>
-      <p style="margin-top:20px; color:var(--ink-soft); font-size:15px; font-weight:300; line-height:1.7">Notre conviction : la conformité réglementaire n'est pas une contrainte administrative, mais un levier stratégique. Un dossier bien construit, une stratégie de dépôt bien cadrée et une veille réglementaire rigoureuse permettent de réduire les délais, d'éviter les rejets, et d'ouvrir la voie à de nouveaux marchés.</p>
+      <div class="kicker" data-i18n="ap.kicker1">Notre mission</div>
+      <h2 data-i18n="ap.h2.1">La conformité réglementaire comme levier stratégique.</h2>
+      <p class="lead" data-i18n="ap.lead1">CREATOR accompagne les laboratoires, fabricants et porteurs de projets de la santé animale dans la sécurisation de leur accès aux marchés — de la stratégie initiale jusqu'à l'obtention de l'Autorisation de Mise sur le Marché.</p>
+      <p style="margin-top:20px; color:var(--ink-soft); font-size:15px; font-weight:300; line-height:1.7" data-i18n="ap.p1">Notre conviction : la conformité réglementaire n'est pas une contrainte administrative, mais un levier stratégique. Un dossier bien construit, une stratégie de dépôt bien cadrée et une veille réglementaire rigoureuse permettent de réduire les délais, d'éviter les rejets, et d'ouvrir la voie à de nouveaux marchés.</p>
       <div class="stat-row">
-        <div class="stat"><b>2025</b><span>Année de création</span></div>
-        <div class="stat"><b>4</b><span>Filières animales</span></div>
-        <div class="stat"><b>UEMOA+</b><span>Zone d'intervention</span></div>
+        <div class="stat"><b data-i18n="ap.stat1.b">2025</b><span data-i18n="ap.stat1.s">Année de création</span></div>
+        <div class="stat"><b data-i18n="ap.stat2.b">4</b><span data-i18n="ap.stat2.s">Filières animales</span></div>
+        <div class="stat"><b data-i18n="ap.stat3.b">UEMOA+</b><span data-i18n="ap.stat3.s">Zone d'intervention</span></div>
       </div>
     </div>
     <div>
       <div class="founder-card">
         <div class="name">Dr Malick SENE</div>
-        <div class="title">Fondateur & Directeur Général</div>
-        <p>Vétérinaire spécialisé en affaires réglementaires, Dr Malick SENE a fondé CREATOR avec la conviction que les acteurs africains de la santé animale méritent un accompagnement réglementaire de haut niveau, ancré dans les réalités du continent.</p>
-        <p style="margin-top:14px">Sa maîtrise du cadre réglementaire UEMOA (Règlement N°02/2006/CM/UEMOA) et son expérience dans la constitution de dossiers d'AMM complexes font de lui un interlocuteur de référence pour les entreprises qui souhaitent accéder aux marchés d'Afrique de l'Ouest.</p>
+        <div class="title" data-i18n="ap.founder.title">Fondateur & Directeur Général</div>
+        <p data-i18n="ap.founder.p1">Vétérinaire spécialisé en affaires réglementaires, Dr Malick SENE a fondé CREATOR avec la conviction que les acteurs africains de la santé animale méritent un accompagnement réglementaire de haut niveau, ancré dans les réalités du continent.</p>
+        <p style="margin-top:14px" data-i18n="ap.founder.p2">Sa maîtrise du cadre réglementaire UEMOA (Règlement N°02/2006/CM/UEMOA) et son expérience dans la constitution de dossiers d'AMM complexes font de lui un interlocuteur de référence pour les entreprises qui souhaitent accéder aux marchés d'Afrique de l'Ouest.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Zone d'intervention -->
 <section class="section" style="background:var(--cream); padding-top:0">
   <div class="wrap">
-    <div class="kicker">Champ d'intervention</div>
-    <h2>De l'Afrique de l'Ouest au monde entier.</h2>
-    <p class="lead">Nous intervenons principalement dans le cadre du Règlement N°02/2006/CM/UEMOA régissant le médicament vétérinaire en Afrique de l'Ouest, avec une vocation résolument internationale.</p>
-
+    <div class="kicker" data-i18n="ap.kicker2">Champ d'intervention</div>
+    <h2 data-i18n="ap.h2.2">De l'Afrique de l'Ouest au monde entier.</h2>
+    <p class="lead" data-i18n="ap.lead2">Nous intervenons principalement dans le cadre du Règlement N°02/2006/CM/UEMOA régissant le médicament vétérinaire en Afrique de l'Ouest, avec une vocation résolument internationale.</p>
     <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:48px">
       <div style="padding:32px; background:var(--paper); border:1px solid var(--line); border-radius:2px">
-        <div style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-bottom:12px">Zone UEMOA</div>
-        <p style="font-size:14.5px; color:var(--ink-soft); font-weight:300; line-height:1.7">Maîtrise approfondie du cadre réglementaire communautaire : dépôt auprès du Secrétariat Permanent du Comité Régional du Médicament Vétérinaire (CRMV), suivi avec la Commission de l'UEMOA.</p>
+        <div style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-bottom:12px" data-i18n="ap.zone1.title">Zone UEMOA</div>
+        <p style="font-size:14.5px; color:var(--ink-soft); font-weight:300; line-height:1.7" data-i18n="ap.zone1.p">Maîtrise approfondie du cadre réglementaire communautaire : dépôt auprès du Secrétariat Permanent du Comité Régional du Médicament Vétérinaire (CRMV), suivi avec la Commission de l'UEMOA.</p>
       </div>
       <div style="padding:32px; background:var(--paper); border:1px solid var(--line); border-radius:2px">
-        <div style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-bottom:12px">Vocation internationale</div>
-        <p style="font-size:14.5px; color:var(--ink-soft); font-weight:300; line-height:1.7">Accompagnement de laboratoires européens et internationaux souhaitant enregistrer leurs produits en Afrique, avec une lecture croisée des exigences locales et des standards internationaux.</p>
+        <div style="font-family:'Fraunces',serif; font-size:18px; color:var(--navy); margin-bottom:12px" data-i18n="ap.zone2.title">Vocation internationale</div>
+        <p style="font-size:14.5px; color:var(--ink-soft); font-weight:300; line-height:1.7" data-i18n="ap.zone2.p">Accompagnement de laboratoires européens et internationaux souhaitant enregistrer leurs produits en Afrique, avec une lecture croisée des exigences locales et des standards internationaux.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Filières -->
 <section class="species-strip" style="margin-top:0">
   <div class="wrap">
-    <p>Filières animales couvertes par CREATOR</p>
+    <p data-i18n="ap.strip.p">Filières animales couvertes par CREATOR</p>
     <div class="species-tags">
-      <span>Équine</span>
-      <span>Bovine</span>
-      <span>Canine & féline</span>
-      <span>Avicole</span>
+      <span data-i18n="idx.sp1">Équine</span><span data-i18n="idx.sp2">Bovine</span>
+      <span data-i18n="idx.sp3">Canine & féline</span><span data-i18n="idx.sp4">Avicole</span>
     </div>
   </div>
 </section>
 
-<!-- Approche -->
 <section class="section approach">
   <div class="wrap">
-    <div class="kicker">Nos valeurs</div>
-    <h2>Une méthode exigeante, pensée pour la santé animale.</h2>
-    <p class="lead">Chaque mission s'appuie sur les mêmes fondamentaux, quel que soit le marché ou la filière concernée.</p>
+    <div class="kicker" data-i18n="ap.kicker3">Nos valeurs</div>
+    <h2 data-i18n="ap.h2.3">Une méthode exigeante, pensée pour la santé animale.</h2>
+    <p class="lead" data-i18n="ap.lead3">Chaque mission s'appuie sur les mêmes fondamentaux, quel que soit le marché ou la filière concernée.</p>
     <div class="value-grid">
-      <div class="value-cell"><b>Rigueur</b><p>Des dossiers construits pour résister à l'examen le plus strict des autorités.</p></div>
-      <div class="value-cell"><b>Clarté</b><p>Une feuille de route réglementaire lisible, sans jargon inutile.</p></div>
-      <div class="value-cell"><b>Proximité</b><p>Un interlocuteur unique, disponible à chaque étape du projet.</p></div>
-      <div class="value-cell"><b>Vision globale</b><p>Une lecture des marchés locaux et internationaux pour anticiper vos expansions.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v1.b">Rigueur</b><p data-i18n="idx.v1.p">Des dossiers construits pour résister à l'examen le plus strict des autorités.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v2.b">Clarté</b><p data-i18n="idx.v2.p">Une feuille de route réglementaire lisible, sans jargon inutile.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v3.b">Proximité</b><p data-i18n="idx.v3.p">Un interlocuteur unique, disponible à chaque étape du projet.</p></div>
+      <div class="value-cell"><b data-i18n="idx.v4.b">Vision globale</b><p data-i18n="idx.v4.p">Une lecture des marchés locaux et internationaux pour anticiper vos expansions.</p></div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
-    <p>© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
-  </div>
-</footer>
-
+<footer><div class="wrap footer-inner">
+  <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
+  <p data-i18n="footer.copy">© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
+</div></footer>
+<script src="i18n.js"></script>
 </body>
 </html>

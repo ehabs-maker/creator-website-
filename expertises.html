@@ -8,123 +8,101 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="logo.jpeg" alt="Logo CREATOR">
-      <span class="brand-name">CREATOR</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="expertises.html" class="active">Expertises</a></li>
-        <li><a href="realisations.html">Réalisations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="contact.html" class="nav-cta">Nous contacter</a>
+    <a href="index.html" class="brand"><img src="logo.jpeg" alt="Logo CREATOR"><span class="brand-name">CREATOR</span></a>
+    <nav><ul>
+      <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="expertises.html" class="active" data-i18n="nav.expertises">Expertises</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="lang-btn" onclick="i18n.toggle()">EN</button>
+      <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Nous contacter</a>
+    </div>
     <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">Menu</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="apropos.html">À propos</a>
-    <a href="expertises.html">Expertises</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="contact.html">Contact</a>
+    <a href="apropos.html" data-i18n="nav.about">À propos</a>
+    <a href="expertises.html" data-i18n="nav.expertises">Expertises</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <button class="lang-btn" onclick="i18n.toggle()" style="margin-top:12px;align-self:flex-start">EN</button>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="kicker">Nos expertises</div>
-    <h1>Quatre piliers, une seule ambition.</h1>
-    <p>Sécuriser votre accès au marché, de la stratégie initiale jusqu'à l'enregistrement effectif de votre produit.</p>
+    <div class="kicker" data-i18n="ex.kicker.hero">Nos expertises</div>
+    <h1 data-i18n="ex.h1">Quatre piliers, une seule ambition.</h1>
+    <p data-i18n="ex.hero.p">Sécuriser votre accès au marché, de la stratégie initiale jusqu'à l'enregistrement effectif de votre produit.</p>
   </div>
 </section>
 
 <section class="section services" style="background:var(--cream)">
   <div class="wrap">
     <div class="service-list">
-
       <div class="service-item">
         <div class="service-mark">01</div>
-        <div>
-          <h3>Stratégie & accompagnement de projets</h3>
-          <p>Nous cadrons votre projet de santé animale dès l'amont : analyse d'opportunité, choix des marchés cibles, feuille de route réglementaire et pilotage jusqu'à la mise en œuvre.</p>
-        </div>
+        <div><h3 data-i18n="ex.s1.h3">Stratégie & accompagnement de projets</h3><p data-i18n="ex.s1.p">Nous cadrons votre projet de santé animale dès l'amont : analyse d'opportunité, choix des marchés cibles, feuille de route réglementaire et pilotage jusqu'à la mise en œuvre.</p></div>
         <ul>
-          <li>Diagnostic et faisabilité réglementaire</li>
-          <li>Analyse des marchés cibles et des cadres applicables</li>
-          <li>Feuille de route multi-marchés</li>
-          <li>Pilotage de projet et coordination des parties prenantes</li>
-          <li>Veille réglementaire ciblée</li>
+          <li data-i18n="ex.s1.li1">Diagnostic et faisabilité réglementaire</li>
+          <li data-i18n="ex.s1.li2">Analyse des marchés cibles et des cadres applicables</li>
+          <li data-i18n="ex.s1.li3">Feuille de route multi-marchés</li>
+          <li data-i18n="ex.s1.li4">Pilotage de projet et coordination des parties prenantes</li>
+          <li data-i18n="ex.s1.li5">Veille réglementaire ciblée</li>
         </ul>
       </div>
-
       <div class="service-item">
         <div class="service-mark">02</div>
-        <div>
-          <h3>Audit & conformité réglementaire</h3>
-          <p>Nous évaluons vos dossiers, vos systèmes qualité et vos process au regard des exigences en vigueur, pour anticiper les non-conformités avant qu'elles ne deviennent des blocages.</p>
-        </div>
+        <div><h3 data-i18n="ex.s2.h3">Audit & conformité réglementaire</h3><p data-i18n="ex.s2.p">Nous évaluons vos dossiers, vos systèmes qualité et vos process au regard des exigences en vigueur, pour anticiper les non-conformités avant qu'elles ne deviennent des blocages.</p></div>
         <ul>
-          <li>Audit de dossiers techniques et administratifs</li>
-          <li>Audit de sites de fabrication</li>
-          <li>Identification des écarts et plans d'action correctifs</li>
-          <li>Mise en conformité documentaire</li>
-          <li>Suivi des évolutions réglementaires</li>
+          <li data-i18n="ex.s2.li1">Audit de dossiers techniques et administratifs</li>
+          <li data-i18n="ex.s2.li2">Audit de sites de fabrication</li>
+          <li data-i18n="ex.s2.li3">Identification des écarts et plans d'action correctifs</li>
+          <li data-i18n="ex.s2.li4">Mise en conformité documentaire</li>
+          <li data-i18n="ex.s2.li5">Suivi des évolutions réglementaires</li>
         </ul>
       </div>
-
       <div class="service-item">
         <div class="service-mark">03</div>
-        <div>
-          <h3>Enregistrement des produits vétérinaires</h3>
-          <p>Nous constituons et déposons vos dossiers d'enregistrement auprès des autorités compétentes — notamment dans le cadre du Règlement N°02/2006/CM/UEMOA —, en assurant le suivi jusqu'à l'obtention de l'AMM.</p>
-        </div>
+        <div><h3 data-i18n="ex.s3.h3">Enregistrement des produits vétérinaires</h3><p data-i18n="ex.s3.p">Nous constituons et déposons vos dossiers d'enregistrement auprès des autorités compétentes — notamment dans le cadre du Règlement N°02/2006/CM/UEMOA —, en assurant le suivi jusqu'à l'obtention de l'AMM.</p></div>
         <ul>
-          <li>Constitution de dossiers techniques complets</li>
-          <li>Rédaction des parties administratives et réglementaires</li>
-          <li>Dépôt auprès du Secrétariat Permanent CRMV / Commission UEMOA</li>
-          <li>Suivi des demandes et réponses aux questions des autorités</li>
-          <li>Maintien et renouvellement de l'enregistrement post-AMM</li>
+          <li data-i18n="ex.s3.li1">Constitution de dossiers techniques complets</li>
+          <li data-i18n="ex.s3.li2">Rédaction des parties administratives et réglementaires</li>
+          <li data-i18n="ex.s3.li3">Dépôt auprès du Secrétariat Permanent CRMV / Commission UEMOA</li>
+          <li data-i18n="ex.s3.li4">Suivi des demandes et réponses aux questions des autorités</li>
+          <li data-i18n="ex.s3.li5">Maintien et renouvellement de l'enregistrement post-AMM</li>
         </ul>
       </div>
-
       <div class="service-item">
         <div class="service-mark">04</div>
-        <div>
-          <h3>Élaboration de dossiers de projet industriels</h3>
-          <p>Nous accompagnons les PME et porteurs de projets dans la structuration et la formalisation de leurs projets industriels, notamment dans le secteur agroalimentaire, pour faciliter leur financement et leur mise en œuvre.</p>
-        </div>
+        <div><h3 data-i18n="ex.s4.h3">Élaboration de dossiers de projet industriels</h3><p data-i18n="ex.s4.p">Nous accompagnons les PME et porteurs de projets dans la structuration et la formalisation de leurs projets industriels, notamment dans le secteur agroalimentaire, pour faciliter leur financement et leur mise en œuvre.</p></div>
         <ul>
-          <li>Études de faisabilité et plans d'affaires</li>
-          <li>Montage de dossiers de financement (banques, fonds, bailleurs)</li>
-          <li>Analyse du cadre réglementaire applicable à l'activité</li>
-          <li>Accompagnement dans les démarches administratives</li>
-          <li>Structuration de projets agroalimentaires et industriels</li>
+          <li data-i18n="ex.s4.li1">Études de faisabilité et plans d'affaires</li>
+          <li data-i18n="ex.s4.li2">Montage de dossiers de financement (banques, fonds, bailleurs)</li>
+          <li data-i18n="ex.s4.li3">Analyse du cadre réglementaire applicable à l'activité</li>
+          <li data-i18n="ex.s4.li4">Accompagnement dans les démarches administratives</li>
+          <li data-i18n="ex.s4.li5">Structuration de projets agroalimentaires et industriels</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="section" style="background:var(--navy); padding:80px 0;">
   <div class="wrap" style="text-align:center">
-    <h2 style="color:var(--paper); max-width:580px; margin:0 auto 20px">Un projet ? Parlons-en.</h2>
-    <p style="color:rgba(255,255,255,0.7); font-size:17px; font-weight:300; max-width:480px; margin:0 auto 36px">Décrivez-nous votre besoin : nous revenons vers vous avec une première lecture sous 48h.</p>
-    <a href="contact.html" class="btn btn-primary">Planifier un échange</a>
+    <h2 style="color:var(--paper); max-width:580px; margin:0 auto 20px" data-i18n="ex.cta.h2">Un projet ? Parlons-en.</h2>
+    <p style="color:rgba(255,255,255,0.7); font-size:17px; font-weight:300; max-width:480px; margin:0 auto 36px" data-i18n="ex.cta.p">Décrivez-nous votre besoin : nous revenons vers vous avec une première lecture sous 48h.</p>
+    <a href="contact.html" class="btn btn-primary" data-i18n="ex.cta.btn">Planifier un échange</a>
   </div>
 </section>
 
-<footer>
-  <div class="wrap footer-inner">
-    <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
-    <p>© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
-  </div>
-</footer>
-
+<footer><div class="wrap footer-inner">
+  <span class="brand-name">CREATOR — Regulatory Excellence. Global Impact.</span>
+  <p data-i18n="footer.copy">© 2025 CREATOR. Guédiawaye, Sénégal. Au service de la santé animale dans le monde.</p>
+</div></footer>
+<script src="i18n.js"></script>
 </body>
 </html>
